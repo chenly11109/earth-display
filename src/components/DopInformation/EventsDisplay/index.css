@@ -1,0 +1,10 @@
+.dopPage_event_container {
+  width: 100%;
+  height: 90px;
+  background-color: rgb(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  justify-content: space-between;
+  position: relative;
+}

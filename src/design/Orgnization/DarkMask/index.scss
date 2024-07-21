@@ -1,0 +1,16 @@
+.dark_mask{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000, $alpha: 0.65);
+  backdrop-filter: blur(35px);
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 10;
+  transform: scale3d(1, 0, 1);
+  transition: all 0.7s cubic-bezier(0.62, 0, 0.17, 1);
+  cursor: default;
+}
+
+.close_mask{
+  transform: scale3d(1, 1, 1);
+}

@@ -1,0 +1,10 @@
+.canvas_home {
+    width: 80vw;
+    height: 100vh;
+    left: 25vw;
+    position: absolute;
+}
+
+.animated {
+    height: 100%;
+}

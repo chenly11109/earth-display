@@ -1,0 +1,80 @@
+
+.loginWrap{
+  width: 100vw;
+  height: 100vh;
+  background: #212432;
+  position: fixed;
+  left: 0;top: 0;
+  z-index: 2;
+  cursor: default;
+  opacity: 0;
+  animation: bgFadeIn 800ms ease-in-out forwards;
+  @keyframes bgFadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+}
+
+
+// 控制container的显示与消失
+.in_400ms{
+  animation: fadein_400ms 400ms ease-out ;
+  @keyframes fadein_400ms {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}
+.out_400ms{
+  animation: fadeout_400ms 400ms ease-out ;
+  @keyframes fadeout_400ms {
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+}
+.out_400ms_forwards{
+  animation: fadeout_400ms 400ms ease-out forwards;
+  @keyframes fadeout_400ms {
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+}
+.out_300ms{
+  animation: fadeout_300ms 300ms ease-out;
+  @keyframes fadeout_300ms {
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+}
+.in_500ms{
+  opacity: 1;
+  animation: in_out_500ms 500ms ease-in-out ;
+  @keyframes in_out_500ms {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+stages:
+    - build
+
+build_earth:    
+    stage: build
+    only:
+        - dev
+    tags:
+        - earth
+    script:
+        - $SCRIPT

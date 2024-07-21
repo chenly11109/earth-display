@@ -1,0 +1,31 @@
+.addWorkflow_title_container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #383838;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.addWorkflow_title{
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: center;
+    background-color: #383838;
+    border: none;
+    color:white;
+    font-size: 24px;
+}
+
+.addWorkflow_title_button{
+    position:absolute;
+    top:10px;
+    right:100px;
+    width:250px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}

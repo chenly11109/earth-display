@@ -1,0 +1,43 @@
+.point_info {
+    width: 23vw;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    display: grid;
+    position: absolute;
+}
+
+.drag_bar {
+    height: 4vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 5px 0 0;
+}
+
+.box_content {
+    height: 48vh;
+}
+
+.box_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.learn_more {
+    width: 8vw;
+    height: 5vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.learn_more:hover {
+    box-shadow: rgb(255, 255, 255) 0px 0px 10px inset;
+}
+
+.learn_text {
+    color: white;
+    font-size: 16px;
+}

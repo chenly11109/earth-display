@@ -1,0 +1,82 @@
+.titleNameInputWrap{
+  position: relative;
+  width: fit-content;
+  &__titleNameInput{
+    border: 1px solid transparent;
+    outline: none;
+    padding: 0;
+    padding-left: calc(12 / 1080 * 100vh);
+    padding-right: calc(12 / 1080 * 100vh);
+    background: rgba($color: #000000, $alpha: 0.1);
+    border-radius: calc(8 / 1080 * 100vh);
+    font-weight: 300;
+    font-size: calc(24 / 1080 * 100vh);
+    line-height: calc(24 / 1080 * 100vh);
+    color: #fff;
+    box-sizing: border-box;
+    transition: border 200ms ease-out;
+    &:hover{
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    &--active{
+      &:hover{
+        border: 1px solid transparent;
+      }
+    }
+    &--typing{
+      &:hover{
+        border: 1px solid transparent;
+      }
+    }
+
+    &--large{
+      font-size: calc(28 / 1080 * 100vh);
+      line-height: calc(28 / 1080 * 100vh);
+    }
+
+  }
+  &__focus{
+    border-radius: calc(8 / 1080 * 100vh);
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+  }
+  &__error{
+    border-radius: calc(8 / 1080 * 100vh);
+    border: 2px solid #FF7070;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+    &--flash{
+      animation: flash 300ms 800ms forwards;
+      @keyframes flash {
+        0%{
+          opacity: 0;
+        }
+        32%{
+          opacity: 0;
+        }
+        33%{
+          opacity: 1;
+        }
+        65%{
+          opacity: 1;
+        }
+        66%{
+          opacity: 0;
+        }
+        99%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

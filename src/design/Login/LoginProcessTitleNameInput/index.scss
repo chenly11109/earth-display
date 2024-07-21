@@ -1,0 +1,156 @@
+
+.LoginProcessTitleNameInputWrap{
+  animation: usernameInputRaiseUp 600ms ease-in-out;
+  @keyframes usernameInputRaiseUp {
+    from{
+      transform: translateY(calc(56/1080*100vh));
+    }
+    to{
+      transform: translateY(0);
+    }
+  }
+}
+
+.LoginProcessTitleNameInput{
+  width: calc(1127/1080*100vh);
+  margin-top: calc(352 / 1080 * 100vh);
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  animation: breathe 2000ms infinite ease-out alternate;
+  transition: opacity 0.2s ease-out, margin-top 600ms ease-in-out 1.2s, transform 600ms ease-in-out;  // 点击next按钮之后，margin-top变化
+  position: relative;
+  @keyframes breathe {
+    from{
+      opacity: 0.2;
+    }
+    to{
+      opacity: 0.8;
+    }
+  }
+  &__svg{
+    width: calc(1127 / 1080 * 100vh);
+    height: calc(220 / 1080 * 100vh);
+    cursor: url('./cursor.svg'), default;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // 提示文字
+  &__errorText{
+    font-size: calc(24/1080*100vh);
+    line-height: calc(24/1080*100vh);
+    color: #FF7474;
+    font-weight: 300;
+    text-align: center;
+    transition: all 200ms ease-out;
+    position: absolute;
+    width: 100%;
+    top: calc(180/1080*100vh);
+  }
+
+  &__input{
+    width: calc(1200 / 1920 * 100vw);
+    height: 1.5em;
+    outline: none;
+    padding: 0;
+    background-color: transparent;
+    color: #fff;
+    border: 0;
+    text-align: center;
+    font-family: 'Questrial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(48 / 1080 * 100vh);
+    line-height: 1.5em;
+    box-sizing: border-box;
+    left: 50%;top: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    position: absolute;
+    cursor: url('./cursor.svg'), default;
+    margin-top: calc(100/1080*100vh);
+
+  }
+  .LoginProcessTitleNameInput__input--next{
+    cursor: default!important;
+  }
+  .LoginProcessTitleNameInput__input--clicked{
+    opacity: 1;
+    cursor: auto;
+  }
+
+}
+.LoginProcessTitleNameInput--clicked{
+  animation: none;
+  opacity: 1;
+  cursor: default;
+  margin-top: calc(352/1080*100vh);
+}
+.LoginProcessTitleNameInput--hover{
+  animation: lightUp 200ms ease-out;
+  @keyframes lightUp {
+    from{
+      opacity: 0.5;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  opacity: 1;
+}
+.LoginProcessTitleNameInput__svg--clicked{
+  opacity: 0;
+  cursor: default!important;
+  border: 1px solid coral;
+}
+
+.LoginProcessTitleNameInput__lineWrap{
+  width: fit-content;
+  position: absolute;
+  top: calc(102/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 300ms ease-out;
+}
+// 线
+.LoginProcessTitleNameInput__line{
+  width: 100%;
+  height: 0;
+  border: 1px solid #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) scale3d(0, 1, 1) translateY(calc((35 + 20) / 1080 * 100vh));
+  transition: all 1.2s cubic-bezier(1,0.3,0,0.7), width 0.3s ease-out, border 200ms ease-out;
+
+}
+.LoginProcessTitleNameInput__line--clicked{
+  transform: translateX(-50%) scale3d(1, 1, 1) translateY(calc((35 + 20) / 1080 * 100vh));
+}
+
+.LoginProcessTitleNameInput__line--next{
+  transform: translateX(-50%) scale3d(0, 1, 1) translateY(calc((35 + 20) / 1080 * 100vh));
+}
+// 小提示
+.LoginProcessTitleNameInput__prompt{
+  position: absolute;
+  right: calc(-40/1080*100vh);
+  bottom: calc(-56/1080*100vh);
+  transition: all 300ms ease-out;
+  animation: promptFadeIn 300ms 1200ms ease-out forwards;
+  opacity: 0;
+  @keyframes promptFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &--completed{
+    animation: none;
+    opacity: 0;
+  }
+}

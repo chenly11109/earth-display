@@ -1,0 +1,23 @@
+.button_fullscreen {
+  width: fit-content;
+  padding: calc(8/1080*100vh) calc(28/1080*100vh);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(28 / 1080 * 100vh);
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  border-radius: calc(8 / 1080 * 100vh);
+  transition:all 200ms;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &:active{
+    opacity: 0.5;
+  }
+
+}

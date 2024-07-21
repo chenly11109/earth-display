@@ -1,0 +1,25 @@
+.template_tab{
+    position:relative;
+    height: 100%;
+    color:grey;
+}
+
+.template_tab_name{
+    color:white;
+    font-size: 24px;
+    height:60px;
+}
+
+.bottom{
+    position:absolute;
+    bottom:0
+}
+
+.save_logo{
+    position:absolute;
+    bottom:0;
+    right:0
+}
+.save_logo--saved{
+   fill:greenyellow
+}

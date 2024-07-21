@@ -1,0 +1,95 @@
+.left_bar_container {
+
+    position: absolute;
+    height: 100%;
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    background: #383838;
+    box-shadow: 6px 0px 20px rgba(0, 0, 0, 0.25);
+    padding:20px;
+    box-sizing: border-box;
+    z-index: 2;
+
+    // 登陆
+    .loginButton{
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      position: absolute;
+      bottom: 160px;
+      left: 20px;
+
+      &__icon{
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .item{
+        height:40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        color:white;
+        background-color: rgba(white,0.2);
+        margin-bottom: 20px;
+        cursor: pointer;
+        &.home{
+            background-color: #FF7474;
+        }
+
+        &.open{
+            border-left:greenyellow 2px solid;
+        }
+
+        &.selected{
+            background-color: rgba(white,0.4) ;
+        }
+
+        &.change{
+            background-color: #383838;
+            border: 1px dashed white;
+            position:absolute;
+            width:40px;
+            bottom:70px;
+        }
+    }
+}
+.btm {
+    bottom: 0;
+    position: absolute;
+}
+
+.edit_bar {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    color: #747474;
+    border: 1px #747474 dashed;
+}
+
+.edit_bar:hover {
+    color: #cecece;
+    border: 1px #cecece dashed;
+    cursor: pointer;
+}
+
+.fixed_rb {
+    position: absolute;
+    bottom: 15px;
+    left: 74vw;
+    width: 24vw;
+    display: grid;
+    justify-items: end;
+}

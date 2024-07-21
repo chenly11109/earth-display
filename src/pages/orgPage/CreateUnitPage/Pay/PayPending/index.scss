@@ -1,0 +1,22 @@
+
+
+.pay{
+
+  &__processingText{
+    font-family: 'Tomorrow';
+    font-weight: 400;
+    font-size: calc(28/1080*100vh);
+    line-height: calc(28/1080*100vh);
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    position: absolute;
+    top: calc(566/1080*100vh);
+    transition: all 200ms ease-out;
+  }
+
+  &__payButton{
+    right: calc(120/1080*100vh);
+  }
+
+}

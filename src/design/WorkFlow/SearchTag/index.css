@@ -1,0 +1,31 @@
+.searchTag_container{
+    margin-left:10px;
+    margin-right:10px;
+    width:400px;
+    position:relative
+}
+
+.searchTag_value{
+   width:100%;
+   background-color: black;
+   border: none;
+   font-size: 24px;
+   border-bottom: 1px grey solid;
+   color:white
+}
+
+.searchTag_value:focus{
+    outline:none;
+    border-bottom: 1px greenyellow solid;
+}
+
+
+.searchTag_menu_container{
+    position:absolute;
+    background-color: #2e2d29;
+    border-radius: 5px;
+    width:100%;
+    padding:5px;
+    top:45px;
+    cursor: pointer;
+}

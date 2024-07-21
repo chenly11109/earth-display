@@ -1,0 +1,34 @@
+.dopPage_userDisplay_title_container {
+  color: grey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.dopPage_userDisplay_title {
+  color: grey;
+  padding: 5px;
+  margin: 0px 15px;
+}
+.dopPage_userDisplay_title:hover {
+  color: white;
+  background-color: rgb(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+.dopPage_user_category {
+  font-size: 20px;
+  color: grey;
+  margin: 5px 0px;
+}
+
+.dopPage_user_number {
+  font-size: 36px;
+}
+
+.dopPage_user_number--small {
+  color: greenyellow;
+  font-size: 17px;
+  margin-left: 15px;
+}

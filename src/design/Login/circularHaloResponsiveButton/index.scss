@@ -1,0 +1,87 @@
+
+.circularHaloResponsiveButtonWrap{
+  position: relative;
+  width: fit-content;
+
+  &__text{
+    font-size: calc(28/1080*100vh);
+    line-height: calc(28/1080*100vh);
+    font-weight: 400;
+    font-family: 'Tomorrow';
+    position: absolute;
+    top: calc(132/1080*100vh);
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    text-align: center;
+    cursor: default;
+    transition: all 400ms ease-out;
+    color: white;
+    visibility: hidden;
+
+    &--hover{
+      visibility: visible;
+      top: calc(112/1080*100vh);
+      opacity: 1;
+    }
+  }
+
+    .circularHaloResponsiveButton{
+      width: calc(88/1080*100vh);
+      height: calc(88/1080*100vh);
+      position: relative;
+      cursor: pointer;
+
+      &__button{
+        width: calc(88/1080*100vh);
+        height: calc(88/1080*100vh);
+        position: absolute;
+        top: 0;left: 0;
+        transition: all 400ms ease-out;
+      }
+
+      &__tick{
+        width: calc(50/1080*100vh);
+        height: calc(50/1080*100vh);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+        transition: all 400ms ease-out;
+      }
+      &__tickHalo{
+        width: calc(50/1080*100vh);
+        height: calc(50/1080*100vh);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: all 400ms ease-out;
+      }
+
+      &__halo{
+        width: calc(88/1080*100vh);
+        height: calc(88/1080*100vh);
+        position: relative;
+        background: linear-gradient(135deg, #47D0FD 0%, #FD1B7B 100%);
+        filter: blur(12.5px);
+        border-radius: calc(44/1080*100vh);
+        position: absolute;
+        top: 0;left: 0;
+        transition: all 400ms ease-out;
+
+        &--hover{
+          filter: blur(25px);
+        }
+
+        &--click{
+          filter: blur(75px);
+        }
+      }
+
+
+    }
+
+}

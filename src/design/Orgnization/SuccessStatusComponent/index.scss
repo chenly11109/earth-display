@@ -1,0 +1,31 @@
+.successStatusComponent{
+  width: calc(40 / 1080 * 100vh);
+  height: calc(40 / 1080 * 100vh);
+  .successStatusComponent__circle{
+    stroke-dasharray: 122.5;
+    stroke-dashoffset: 122.5;  // 122.5 -> 0  从无到有
+    animation: showCircle 300ms forwards;
+  }
+  .successStatusComponent__tick{
+    stroke-dasharray: 26;
+    stroke-dashoffset: 26;  // 26 -> 0  从无到有
+    animation: showTick 600ms 300ms forwards;
+  }
+
+  @keyframes showCircle {
+    from{
+      stroke-dashoffset: 122.5;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes showTick {
+    from{
+      stroke-dashoffset: 26;
+    }
+    to{
+      stroke-dashoffset: 0;
+    }
+  }
+}

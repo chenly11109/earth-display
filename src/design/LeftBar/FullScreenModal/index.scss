@@ -1,0 +1,18 @@
+.fullscreen{
+   position:absolute;
+   overflow: hidden;
+   color:white;
+   font-size: 24px;
+  
+   background-color: rgba(#181818,0.9);
+
+   .icon{
+      position:absolute;
+      right:25px;
+      top:70px;
+      width:80px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: space-between;
+   }
+}

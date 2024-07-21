@@ -1,0 +1,124 @@
+.position{
+
+  &__ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: calc(40/1080*100vh);
+    margin-left: calc(40/1080*100vh);
+    height: calc(380/1080*100vh);
+    overflow: hidden;
+    width: calc(706/1080*100vh);
+    &--scroll{
+      width: calc(730/1080*100vh);
+      overflow-y: auto;
+      // 滚动条
+      cursor: auto;
+      &::-webkit-scrollbar {
+        width: calc(12 / 1080 * 100vh);
+        min-height: calc(60 / 1080 * 100vh);
+      }
+      &::-webkit-scrollbar-thumb{
+        width: calc(12 / 1080 * 100vh);
+        border-radius: 50px;
+        background-color: #5e5e5e;
+        &:hover{
+          background-color: #8c8c8c;
+        }
+        &:active{
+          background-color: #303030;
+        }
+      }
+
+      li{
+        width: calc(706/1080*100vh);
+      }
+    }
+
+    &__li{
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      height: calc(48/1080*100vh);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: calc(8/1080*100vh);
+      padding-left: calc(24/1080*100vh);
+      line-height: calc(48/1080*100vh);
+      color: #fff;
+      font-weight: 300;
+      font-size: calc(24/1080*100vh);
+      margin-bottom: calc(12/1080*100vh);
+      animation: liFadeIn 200ms ease-out;
+      @keyframes liFadeIn {
+        from {
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+      &__number{
+        position: absolute;
+        left: calc(381/1080*100vh);
+        &__icon{
+          width: calc(48/1080*100vh);
+          height: calc(48/1080*100vh);
+          position: absolute;
+          left: calc(329/1080*100vh);
+        }
+      }
+      &__setting{
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  &__addPosition{
+    width: fit-content;
+    height: calc(40/1080*100vh);
+    padding-left: calc(28/1080*100vh);
+    padding-right: calc(28/1080*100vh);
+    line-height: calc(40/1080*100vh);
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(24 / 1080 * 100vh);
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border-radius: calc(8 / 1080 * 100vh);
+    transition:all 200ms ease-out;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: calc(40/1080*100vh);
+    bottom: calc(40/1080*100vh);
+  
+    &:hover{
+      background: rgba(255, 255, 255, 0.2);
+    }
+  
+    &:active{
+      opacity: 0.5;
+    }
+  
+    animation: addPositionFadeIn 200 ease-out;
+    @keyframes addPositionFadeIn {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+
+    &__icon{
+      width: calc(18/1080*100vh);
+      height: calc(18/1080*100vh);
+      margin-right: calc(9/1080*100vh);
+    }
+  }
+
+}

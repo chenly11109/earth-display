@@ -1,0 +1,7 @@
+export { ReactComponent as Favorite } from './favorite.svg'
+export { ReactComponent as HoverFavorite } from './hoverFavorite.svg'
+export { ReactComponent as HoverShare } from './hoverShare.svg'
+export { ReactComponent as Share } from './share.svg'
+export { ReactComponent as Like } from './like.svg'
+export { ReactComponent as HoverLike } from './hoverLike.svg'
+export { ReactComponent as View } from './view.svg'

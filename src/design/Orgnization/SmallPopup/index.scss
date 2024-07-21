@@ -1,0 +1,86 @@
+.smallPopupWrap{
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  &__popup{
+    background: #3F3F3F;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5), 0px 0px 50px rgba(0, 0, 0, 0.5);
+    border-radius: calc(8/1080*100vh);
+    transition: transform 30ms, width 200ms ease-out, height 200ms ease-out;
+    &--click{
+      animation: focus 100ms 8 ;
+      @keyframes focus {
+        0%{
+          box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        50%{
+          box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+        100%{
+          box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+    &__titleBar{
+      position: relative;
+      width: 100%;
+      height: calc(42/1080*100vh);
+      padding-left: calc(20/1080*100vh);
+      line-height: calc(42/1080*100vh);
+      font-weight: 400;
+      font-size: calc(22/1080*100vh);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 2px rgba(255, 255, 255, 0.3);
+      border-radius: calc(8/1080*100vh) calc(8/1080*100vh) 0px 0px;
+      box-sizing: border-box;
+      cursor: move;
+      &--click{
+        animation: titleFlash 100ms 8;
+        @keyframes titleFlash {
+          0%{
+            opacity: 0.2;
+          }
+          50%{
+            opacity: 1;
+          }
+          100%{
+            opacity: 0.2;
+          }
+        }
+      }
+      &__iconWrap{
+        width: calc(60/1080*100vh);
+        height: 100%;
+        border-radius: 0 calc(8/1080*100vh) 0 0;
+        position: absolute;
+        top: 0;right: 0;
+        transition: all 200ms ease-out;
+        cursor: pointer;
+        &:hover{
+          background: #FF5151;
+        }
+        &:active{
+          opacity: 0.5;
+        }
+        &__icon{
+          width: calc(15/1080*100vh);
+          height: calc(15/1080*100vh);
+          position: absolute;
+          left: 50%;top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

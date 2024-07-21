@@ -1,0 +1,62 @@
+#icon_btn {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon_btn:hover {
+    cursor: pointer;
+}
+
+.edit_icon {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.edit_icon:hover {
+    background-color: rgba(50, 50, 50, 1);
+}
+
+.edit_icon:active {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.enter_icon {
+    background-color: rgba(50, 50, 50, 1);
+}
+
+.enter_icon:hover {
+    background-color: rgba(70, 70, 70, 1);
+}
+
+.enter_icon:active {
+    background-color: rgba(70, 70, 70, 0.5);
+}
+
+.delete_icon:hover {
+    background-color: rgba(207, 68, 68, 1);
+}
+
+.delete_icon:active {
+    background-color: rgba(207, 68, 68, 0.5);
+}
+
+.add_icon {
+    background-color: rgba(50, 50, 50, 1);
+}
+
+.add_icon:hover {
+    background-color: rgba(70, 70, 70, 1);
+}
+
+.add_icon:active {
+    background-color: rgba(70, 70, 70, 0.5);
+}
+
+.del_icon:hover {
+    background-color: rgba(207, 68, 68, 1);
+}
+
+.del_icon:active {
+    background-color: rgba(207, 68, 68, 0.5);
+}

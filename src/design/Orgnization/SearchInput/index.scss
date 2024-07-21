@@ -1,0 +1,114 @@
+.searchInputWrap{
+  position: relative;
+  width: fit-content;
+  &__icon{
+    width: calc(15/1080*100vh);
+    height: calc(15/1080*100vh);
+    position: absolute;
+    top: calc(10/1080*100vh);
+    left: calc(12/1080*100vh);
+  }
+
+  &__input{
+    width: calc(641/1080*100vh);
+    height: calc(36/1080*100vh);
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1), inset 0px 1px 1px rgba(255, 255, 255, 0.2);
+    border-radius: calc(5/1080*100vh);
+    border: 0;
+    box-sizing: border-box;
+    padding: calc(7/1080*100vh) calc(35/1080*100vh) calc(9/1080*100vh);
+    font-weight: 300;
+    transition: background 200ms ease-out;
+    font-weight: 300;
+    font-size: calc(20/1080*100vh);
+    color: #fff;
+    &:hover{
+      background: rgba(255, 255, 255, 0.15);
+    }
+    &--active{
+      background: rgba(255, 255, 255, 0);
+      &:hover{
+        background: rgba(255, 255, 255, 0);
+      }
+    }
+  }
+
+  &__focus{
+    border-radius: calc(5/1080*100vh);
+    border: 1px solid #fff;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+  }
+
+  &__error{
+    border-radius: calc(5 / 1080 * 100vh);
+    border: 2px solid #FF7070;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    z-index: -1;
+    &--flash{
+      animation: flash 300ms 800ms forwards;
+      @keyframes flash {
+        0%{
+          opacity: 0;
+        }
+        32%{
+          opacity: 0;
+        }
+        33%{
+          opacity: 1;
+        }
+        65%{
+          opacity: 1;
+        }
+        66%{
+          opacity: 0;
+        }
+        99%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__fork{
+    width: calc(36/1080*100vh);
+    height: calc(36/1080*100vh);
+    border-radius: 0 calc(5/1080*100vh) calc(5/1080*100vh) 0;
+    position: absolute;
+    right: 0;top: 0;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 200ms ease-out;
+    &--active{
+      opacity: 1;
+    }
+    &:hover{
+      background: rgba($color: #fff, $alpha: 0.1)
+    }
+    &:active{
+      background: rgba($color: #000, $alpha: 0.1)
+    }
+    &:active &__icon{
+      opacity: 0.5;
+    }
+    &__icon{
+      width: calc(11/1080*100vh);
+      height: calc(11/1080*100vh);
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;top: 50%;
+      transition: all 200ms ease-out;
+    }
+  }
+}

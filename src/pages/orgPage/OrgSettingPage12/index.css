@@ -1,0 +1,293 @@
+
+
+/*new*/
+/*组件*/
+.org-setting .row{
+    display: flex;
+    width: 100%;
+}
+.org-setting .list.vertical{
+    display: flex;
+    flex-direction: column;
+}
+.org-setting .list.horizontal{
+    display: flex;
+}
+.org-setting .switch{
+    border-radius:10px;
+    width: 40px;
+    height: 20px;
+    transition: all .5s;
+    background-color: #323232;
+    cursor: pointer;
+}
+.org-setting .switch::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #A3DA58;
+    transition: all .5s;
+}
+.org-setting .switch.checked::before{
+    transform: translateX(20px);
+}
+.org-setting .modal.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.org-setting .modal{
+    background-color: #323232;
+    padding:20px 50px;
+    gap: 20px;
+}
+.org-setting .radio{
+    cursor: pointer;
+    user-select: none;
+}
+.org-setting .radio::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: white 1px solid;
+    display: block;
+
+}
+.org-setting .radio.checked::before{
+    background-color: #A3DA58;
+    border: #A3DA58 1px solid;
+}
+.org-setting .image-uploader{
+    width:40px;
+    height: 40px;
+    background-color: aquamarine;
+}
+/*样式*/
+
+.org-setting{
+    position:fixed;
+    left: 5vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: bisque;
+}
+.org-setting >.close-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.org-setting>.inner{
+    position: absolute;
+    top: 10vh;
+    bottom: 10vh;
+    left: 15vw;
+    right: 15vw;
+    display: flex;
+}
+
+.org-setting>.inner>.row>.right{
+    background-color:white;
+}
+.org-setting>.inner>.row>.left{
+    flex:0 300px;
+}
+
+.org-setting>.inner>.row>.right{
+   flex: 1;
+}
+
+.org-setting>.inner .leftbar .leftbar-item.selected{
+    background-color: #FF7D7D;
+}
+.org-setting>.inner .leftbar .leftbar-item{
+    display: flex;
+    gap: 5px;
+}
+.org-setting>.inner .create-btn{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.org-setting> .close-confirm{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+.org-setting>.close-confirm .done-btn{
+    flex: 1;
+    color:  #FF7D7D;
+}
+.org-setting>.close-confirm .cancel-btn{
+    flex: 1;
+}
+/*basic information*/
+.org-setting>.inner .basic-info .row{
+    gap: 20px;
+}
+/*position and member*/
+.org-setting>.inner .position-and-member .position-item{
+    padding:2px 10px;
+    border-radius: 10px;
+    background-color: #A3DA58;
+}
+.org-setting>.inner .position-and-member .members{
+    overflow-y: auto;
+    height: 40vh;
+}
+.org-setting>.inner .position-and-member .member-item{
+    background-color: aqua;
+    display: flex;
+}
+.org-setting>.inner .position-and-member .member-item .positions{
+    display: flex;
+    flex-wrap: wrap;
+}
+.org-setting>.inner .position-and-member .member-item .left{
+    display: flex;
+    align-items: center;
+}
+.org-setting>.inner .position-and-member .member-item .name{
+    all:unset;
+}
+.org-setting>.inner .position-and-member .avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #FF7D7D;
+}
+/*management*/
+.org-setting>.inner .management>.setting-title{
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+}
+
+.org-setting>.inner .management .tab-bar .list-item{
+    border-right: 1px solid blue;
+    padding: 0 2vw;
+}
+.org-setting>.inner .management .tab-bar .list-item:first-child{
+    padding-left: 0;
+}
+.org-setting>.inner .management .tab-bar .list-item:last-child{
+   border-right: none;
+}
+.org-setting>.inner .management .auth-card{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: chocolate;
+}
+.org-setting>.inner .management .auth-card>.row{
+    justify-content: space-between;
+}
+.org-setting>.inner .management .auth-card>.row .right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal{
+    width: 500px;
+    height: 400px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color:white;
+
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: gray;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .row{
+   justify-content: space-between;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .row .right{
+    display: flex;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .right{
+    gap: 10px;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .position-tab-bar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal  .tab{
+    border-radius: 10px;
+    user-select: none;
+    padding: 2px 5px;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .tab.checked{
+    background-color: #A3DA58;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal .radio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.org-setting>.inner .management .auth-card .auth-card-modal .radio-group{
+    display: flex;
+    gap: 20px;
+}
+.org-setting>.inner .management .auth-card .auth-card-modal footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+/*decisions*/
+.org-setting .decisions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+}
+.org-setting .decision-making .decisions .decision-item{
+    background-color: #FF7D7D;
+}
+.org-setting .decision-making .decisions .decision-item .content{
+    display: flex;
+}
+.org-setting .decision-making .decisions .decision-item .content .assettype{
+    margin-right: 20px;
+}
+
+.org-setting>.inner .management .auth-card .auth-card-modal  .workflow-list{
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.org-setting>.inner .management .auth-card .auth-card-modal  .workflow-list .tab.checked{
+    all: unset;
+    background-color:#A3DA58;
+}
+.org-setting>.inner .management .auth-card.warn{
+    background-color: red;
+}

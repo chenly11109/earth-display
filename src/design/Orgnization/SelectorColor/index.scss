@@ -1,0 +1,41 @@
+.selectorColor{
+  display: flex;
+  width: calc(360 / 1080 * 100vh);
+  flex-wrap: wrap;
+  .selectorColor__color{
+    position: relative;
+    width: calc(24 / 1080 * 100vh);
+    height: calc(24 / 1080 * 100vh);
+    border-radius: calc(12 / 1080 * 100vh);
+    margin-right: calc(16 / 1080 * 100vh);
+    margin-bottom: calc(16 / 1080 * 100vh);
+
+    &__circle{
+      width: calc(32 / 1080 * 100vh);
+      height: calc(32 / 1080 * 100vh);
+      box-sizing: border-box;
+      border: calc(2/1080*100vh) solid #fff;
+      position: absolute;
+      left: calc(-4/1080*100vh);
+      top: calc(-4/1080*100vh);
+      border-radius: calc(16 / 1080 * 100vh);
+      opacity: 0;
+      transition: opacity 200ms ease-out;
+      &--active{
+        opacity: 1;
+      }
+    }
+    &__tick{
+      width: calc(15 / 1080 * 100vh);
+      height: calc(10 / 1080 * 100vh);
+      position: absolute;
+      left: 50%;top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 200ms ease-out;
+      &--active{
+        opacity: 1;
+      }
+    }
+  }
+}

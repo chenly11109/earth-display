@@ -1,0 +1,41 @@
+.orgLogo{
+  width: calc(80 / 1080 * 100vh);
+  height: calc(80 / 1080 * 100vh);
+  border-radius: calc(8 / 1080 * 100vh);
+  overflow: hidden;
+  position: relative;
+  &__mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    transition: background 200ms ease-out;
+    position: absolute;
+    z-index: 1;
+    &__editIcon{
+      width: calc(32 / 1080 * 100vh);
+      height: calc(32 / 1080 * 100vh);
+      position: absolute;
+      left: 50%;top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 200ms ease-out;
+    }
+    &:hover{
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.6);
+      .orgLogo__mask__editIcon {
+        opacity: 1;
+      }
+    }
+    &:active{
+      .orgLogo__mask__editIcon {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+.longitudinalEmbeddedNavbar{
+  height: calc(428/1080*100vh);
+  display: flex;
+  flex-direction: column;
+  padding: 0;margin: 0;
+  list-style: none;
+  width: fit-content!important;
+  background: rgba(0, 0, 0, 0.15);
+  transition: height 200ms ease-out;
+  li{
+    height: calc(60 / 1080 * 100vh);
+    line-height: calc(60 / 1080 * 100vh);
+    padding-left: calc(24 / 1080 * 100vh);
+    padding-right: calc(24 / 1080 * 100vh);
+    padding-top: 0;padding-bottom: 0;
+    background: transparent;
+    color: #8c8c8c;
+    font-weight: 300;
+    font-size: calc(24 / 1080 * 100vh);
+    transition: all 200ms ease-out;
+    &:hover{
+      cursor: pointer;
+      background: rgba($color: #ffffff, $alpha: 0.05);
+      color: #fff;
+    }
+  }
+}
+// 选中的li
+.react-tabs__tab--selected{
+  background: rgba($color: #ffffff, $alpha: 0.05)!important;
+  color: #fff!important;
+}
+// 整个Tab
+.react-tabs{
+  display: flex;
+}

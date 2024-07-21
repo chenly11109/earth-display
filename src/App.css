@@ -1,0 +1,27 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+.ui_index {
+  display: flex;
+  position: fixed;
+  height: 100%;
+  width:80px;
+  overflow: show;
+}
+
+
+.canvas_index {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left:80px;
+}
+
+body{
+  user-select: none;
+
+}

@@ -1,0 +1,59 @@
+.select_container {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.select_control {
+  height: 30px;
+}
+
+.select_control_contiainer {
+  display: flex;
+  width: 100%;
+}
+
+.select_control_value {
+  border-bottom: 1px solid grey;
+  width: 100%;
+  color: grey;
+}
+.select_control_value--selected {
+  color: white;
+}
+.select_control_value--dropDown {
+  border-bottom: 1px solid greenyellow;
+}
+
+.select_control_indicator {
+  position: absolute;
+  transform: rotate(90deg);
+  right: 0;
+}
+
+.select_menu_container {
+  position: absolute;
+  background-color: #2e2d29;
+  border-radius: 5px;
+  width: 100%;
+  padding: -5px;
+  top: 45px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.select_menu_container::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+.select_menu_container::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+.select_option:hover {
+  color: white;
+  background-color: grey;
+}

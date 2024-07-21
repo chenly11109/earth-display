@@ -1,0 +1,24 @@
+.items-data-content {
+    color: #ffffff;
+    width: 576px;
+    margin-left: 24px;
+    font-weight: 400;
+
+    &>p:first-of-type {
+        font-size: 18px;
+
+        &>span:first-of-type {
+            color: #c0ff6a;
+            margin-right: 6px;
+        }
+
+        &>span:last-of-type {
+            color: #a9a9a9;
+        }
+    }
+
+    &>p:last-of-type {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}

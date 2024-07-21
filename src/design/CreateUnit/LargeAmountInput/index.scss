@@ -1,0 +1,54 @@
+
+
+.largeAmountInput{
+  height: calc(92/1080*100vh);
+  outline: none;
+  font-family: 'Questrial';
+  font-weight: 400;
+  font-size: calc(60/1080*100vh);
+  line-height: calc(60/1080*100vh);
+  text-align: center;
+  color: #FFFFFF;
+  background: transparent;
+  border: 0;
+  transition: border 300ms ease-out;
+  resize: none;
+}
+
+.largeAmountInputLine{
+  border: 1px solid #fff;
+  transition: all 300ms ease-out, border 200ms ease-out;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.largeAmountInputMsg{
+  position: absolute;
+  bottom: calc(-44/1080*100vh);
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: calc(24/1080*100vh);
+  line-height: calc(24/1080*100vh);
+  color: #FF7474;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 200ms ease-out;
+  &--active{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.toGetTextWidth{
+  display: inline-block;
+  font-family: 'Questrial';
+  font-weight: 400;
+  font-size: calc(60/1080*100vh);
+  line-height: calc(60/1080*100vh);
+  position: absolute;
+  top: 0;left: 0;
+  z-index: -111000;
+  visibility: hidden;
+}

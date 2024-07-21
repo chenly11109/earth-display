@@ -1,0 +1,10 @@
+.fullPage_classification_item {
+  color: yellowgreen;
+  margin: 15px;
+}
+
+.fullPage_classification--delete {
+  border-radius: 15px;
+  background-color: darkgrey;
+  color: white;
+}

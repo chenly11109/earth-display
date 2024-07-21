@@ -1,0 +1,21 @@
+.warningModal_container{
+    text-align: center;
+    color:white;
+       height: 100%;
+       font-size: 24px;
+  
+ 
+}
+
+.warningModal_contents_container{
+    font-size: 20px;
+    height:100px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.warningModal_br{
+    width:100%;
+    border-bottom: solid 1px grey;
+}

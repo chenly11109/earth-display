@@ -1,0 +1,55 @@
+.eventTab_container {
+  width: 260px;
+  height: 140px;
+  background-color: #2e2d29;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: grey;
+  /* position:relative; */
+  margin: auto;
+}
+
+.eventTab_container:hover {
+  background-color: #383838;
+}
+
+.eventTab--selected {
+  border: solid 1px plum;
+  box-shadow: 0px 0px 15px plum;
+}
+
+.eventTab_id {
+  font-size: 12px;
+  color: plum;
+  line-height: 0;
+}
+.eventTab_hr {
+  width: 100%;
+  border-bottom: solid 1px grey;
+  margin: 0;
+}
+.eventTab_title {
+  font-style: italic;
+}
+.eventTab_contents {
+  color: white;
+  font-size: 18px;
+}
+
+.eventTab_name {
+  margin-top: 5px;
+  height: 70px;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: white;
+  word-break: break-all;
+}
+
+.eventTab_addNew {
+  border: dashed grey 2px;
+  display: flex;
+  justify-content: center;
+}

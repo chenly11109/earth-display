@@ -1,0 +1,281 @@
+
+.registWrap{
+  opacity: 0;
+  animation: registFadeIn 500ms ease-out 400ms forwards;
+  @keyframes registFadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+}
+
+.inviteText{
+  width: calc(1166/1080*100vh);
+  height: calc(160/1080*100vh);
+  position: absolute;
+  top: calc(316/1080*100vh);
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: calc(60/1080*100vh);
+  line-height: calc(60/1080*100vh);
+  color: #FFFFFF;
+  text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__top,
+  &__bottom{
+    font-family: 'Questrial';
+  }
+}
+
+.haloButton{
+  position: absolute;
+  top: calc(556/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.question{
+  font-family: 'Questrial';
+  font-weight: 400;
+  font-size: calc(48/1080*100vh);
+  line-height: calc(48/1080*100vh);
+  text-align: center;
+  width: 100%;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+  position: absolute;
+  top: calc(222/1080*100vh);
+  opacity: 0;
+  animation: questionFadeIn 300ms ease-out forwards;
+  @keyframes questionFadeIn {
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+
+  &--hover{
+    animation: questionshallow 300ms ease-out forwards;
+    @keyframes questionshallow {
+      from {
+        opacity: 1;
+      }
+      to{
+        opacity: 0.1;
+      }
+    }
+  }
+}
+
+.warnText{
+  font-weight: 300;
+  font-size: calc(28/1080*100vh);
+  line-height: calc(28/1080*100vh);
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  top: calc(566/1080*100vh);
+  transition: all 400ms ease-out;
+  &--hover{
+    font-size: calc(32/1080*100vh);
+    line-height: calc(32/1080*100vh);
+  }
+}
+
+.registButton{
+  position: absolute;
+  top: calc(642/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.username{
+  font-style: normal;
+  font-weight: 400;
+  font-size: calc(60/1080*100vh);
+  line-height: calc(60/1080*100vh);
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  top: calc(415/1080*100vh);
+  transition: all 400ms ease-out;
+  animation: nameMoveUp 1200ms ease-in-out forwards;
+  @keyframes nameMoveUp {
+    from{
+      top: calc(415/1080*100vh);
+    }
+    to{
+      top: calc(189/1080*100vh);
+    }
+  }
+
+  &--up{
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__front,
+  &__back {
+    font-family: "Questrial";
+  }
+
+}
+
+.registedCaptions{
+  width: calc(913/1080*100vh);
+  height: calc(144/1080*100vh);
+  position: absolute;
+  top: calc(292/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 400;
+  font-size: calc(28/1080*100vh);
+  line-height: calc(48/1080*100vh);
+  text-align: center;
+  color: rgba($color: #fff, $alpha: 0.6);
+  text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+  opacity: 0;
+
+  &--show{
+    animation: captionsShow 400ms ease-out 400ms forwards;
+    @keyframes captionsShow {
+      from{
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+  }
+
+  .caption{
+    font-family: 'Questrial';
+    transition: all 300ms ease-out;
+  }
+
+}
+
+.finishButton{
+  position: absolute;
+  top: calc(476/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  &--show{
+    animation: finishButtonShow 400ms ease-out 400ms forwards;
+    @keyframes finishButtonShow {
+      from {
+        opacity: 0;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.learnMoreText{
+  font-weight: 400;
+  font-size: calc(26/1080*100vh);
+  line-height: calc(26/1080*100vh);
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+  position: absolute;
+  bottom: calc(282/1080*100vh);
+  opacity: 0;
+  &--show{
+    animation: learnmoreTextShow 400ms ease-out 600ms forwards;
+    @keyframes learnmoreTextShow {
+      from {
+        opacity: 0;
+        bottom: calc(282/1080*100vh);
+      }
+      to{
+        opacity: 0.4;
+        bottom: calc(302/1080*100vh);
+      }
+    }
+  }
+}
+
+.links{
+  width: calc(1660/1080*100vh);
+  height: calc(182/1080*100vh);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: calc(60/1080*100vh);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  
+  &--show{
+    animation: learnmoreLinksShow 400ms ease-out 600ms forwards;
+    @keyframes learnmoreLinksShow {
+      from {
+        opacity: 0;
+        bottom: calc(60/1080*100vh);
+      }
+      to{
+        opacity: 1;
+        bottom: calc(80/1080*100vh);
+      }
+    }
+  }
+
+  &__link{
+    width: calc(500/1080*100vh);
+    height: calc(182/1080*100vh);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    padding: calc(20/1080*100vh) calc(24/1080*100vh);
+    transition: all 200ms ease-out;
+
+    &:hover{
+      background: #fff;
+      .links__link__title,
+      .links__link__intro{
+        color: black;
+      }
+    }
+    &:active{
+      opacity: 0.3;
+    }
+
+    &__title{
+      font-weight: 400;
+      font-size: calc(26/1080*100vh);
+      line-height: calc(26/1080*100vh);
+      text-align: center;
+      color: #FFFFFF;
+      text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+      padding-bottom: calc(8/1080*100vh);
+    }
+    &__intro{
+      font-weight: 300;
+      font-size: calc(24/1080*100vh);
+      line-height: calc(36/1080*100vh);
+      text-align: center;
+      color: #FFFFFF;
+      opacity: 0.7;
+      text-shadow: 0px 0px 100px rgba(168, 119, 200, 0.3);
+    }
+  }
+}

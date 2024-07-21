@@ -1,0 +1,32 @@
+
+.fullscreenCloseButton{
+  width: calc(92 / 1080 * 100vh);
+  height: calc(76 / 1080 * 100vh);
+  transition: all ease-out 200ms;
+  position:absolute;
+  right:0;
+  top:0;
+  cursor: pointer;
+
+  &:hover{
+    background-color: #FF5151;
+    .fullscreenCloseButton__icon{
+      opacity: 1;
+    }
+  }
+
+  &:active{
+    opacity: 0.5;
+  }
+
+  &__icon{
+    width: calc(36/1080*100vh);
+    height: calc(36/1080*100vh);
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0.5;
+    transition: all 200ms ease-out;
+  }
+
+}

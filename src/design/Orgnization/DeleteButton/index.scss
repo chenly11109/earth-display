@@ -1,0 +1,21 @@
+// 2006删除按钮
+.button_delete{
+  width: calc(124 / 1080 * 100vh);
+  height: calc(40 / 1080 * 100vh);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: calc(8 / 1080 * 100vh);
+  color: #FF7D7D;
+  font-weight: 400;
+  font-size: calc(24 / 1080 * 100vh);
+  line-height: calc(40 / 1080 * 100vh);
+  text-align: center;
+  cursor: pointer;
+  transition: all 200ms ease-out;
+  &:hover{
+    background: #FF5151;
+    color: #ffffff;
+  }
+  &:active{
+    opacity: 0.5;
+  }
+}

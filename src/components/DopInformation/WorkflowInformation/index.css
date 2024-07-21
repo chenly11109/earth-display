@@ -1,0 +1,55 @@
+.dopPage_workflow_tab {
+  background-color: rgb(80, 80, 80, 0.5);
+  margin: 10px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+.dopPage_workflow_tab:hover {
+  background-color: rgb(150, 150, 150, 0.5);
+}
+
+.dopPage_workflow_container {
+  height: 400px;
+  overflow: scroll;
+}
+
+.dopPage_workflow_container::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+.dopPage_workflow_container::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+.icon_selected {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 25px;
+  border: 4px solid #513e59;
+  background-color: #eecaff;
+}
+
+.dopPage_workflow_eventCount {
+  position: absolute;
+  font-size: 20px;
+  top: 10px;
+  right: 20px;
+}
+
+.dopPage_workflow_time {
+  position: absolute;
+  font-size: 18px;
+  bottom: 10px;
+  right: 20px;
+}
+
+.dopPage_workflow_selection {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  color: grey;
+}

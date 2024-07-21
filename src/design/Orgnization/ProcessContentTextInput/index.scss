@@ -1,0 +1,211 @@
+.processContentTextInput{
+  position: relative;
+  margin-top: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+
+  // 大提示文字
+  &__titleWrap{
+    animation: breathe 2000ms infinite ease-out alternate;
+    opacity: 0.5;  // 加上这行hover的时候才有过渡效果
+    transition: opacity 0.2s ease-out;
+    @keyframes breathe {
+      from{
+        opacity: 0.2;
+      }
+      to{
+        opacity: 0.8;
+      }
+    }
+    &:hover{
+      animation: none;
+      cursor: url('./cursor.svg'), default;
+    }
+    
+    &--clicked{
+      opacity: 0;
+    }
+  }
+  svg{
+    width: calc(1180 / 1080 * 100vh);
+    height: calc(220 / 1080 * 100vh);
+  }
+
+  // 输入框
+  .processContentTextInput__textareaWrap{
+    position: absolute;
+    width: calc(1186 / 1920 * 100vw);
+    height: calc(192 / 1080 * 100vh);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__textarea{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: calc(8 / 1080 * 100vh);
+      resize: none;
+      background-color: transparent;
+      padding: calc(8 / 1080 * 100vh) calc(20 / 1080 * 100vh);
+      color: #fff;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: calc(28 / 1080 * 100vh);
+      line-height: calc(42 / 1080 * 100vh);
+      box-sizing: border-box;
+      outline: none;
+      transition: all 200ms;
+      transform: scale3d(0,0,0);
+      cursor: url('./cursor.svg'), default;
+      // overflow-y: hidden;
+      &::-webkit-scrollbar {
+        width: calc(24 / 1080 * 100vh);
+        min-height: calc(60 / 1080 * 100vh);
+      }
+      &::-webkit-scrollbar-thumb{
+        width: calc(8 / 1080 * 100vh);
+        border: 6px solid rgba(255, 255, 0, 0);
+        background-clip: padding-box;
+        border-radius: 50px;
+        background-color: #5e5e5e;
+        &:hover{
+          background-color: #8c8c8c;
+        }
+        &:active{
+          background-color: #303030;
+        }
+      }
+    }
+    &__textarea--active{
+      border: 1px solid #FFFFFF;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      cursor: auto;
+    }
+    &__textarea--hover{
+      animation: showTextarea 300ms cubic-bezier(0,0.92,0.41,1) 400ms forwards;
+      @keyframes showTextarea {
+        from{
+          transform-origin: top left;
+          transform: scale3d(0, 0, 0) translate(-50%, -50%);
+        }
+        to{
+          transform-origin: top left;
+          transform: scale3d(1, 1, 1) translate(-50%, -50%);
+        }
+      }
+    }
+    &__textarea--leave{
+      animation: hideTextarea 300ms cubic-bezier(0,0.92,0.41,1);
+      @keyframes hideTextarea {
+        from{
+          transform-origin: top left;
+          transform: scale3d(1, 1, 1) translate(-50%, -50%);
+        }
+        to{
+          transform-origin: top left;
+          transform: scale3d(0, 0, 0) translate(-50%, -50%);
+        }
+      }
+    }
+    &__textarea--clicked{
+      transform: scale3d(1, 1, 1) translate(-50%, -50%);
+    }
+    // 字数提示
+    &__prompt{
+      position: absolute;
+      right: calc(20 / 1080 * 100vh);
+      bottom: calc(16 / 1080 * 100vh);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: calc(22 / 1080 * 100vh);
+      line-height: calc(22 / 1080 * 100vh);
+      color: rgba(255, 255, 255, 0.7);
+      animation: promptShow 200ms ;
+      @keyframes promptShow {
+        from{
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.processContentTextInput--hover{
+  animation: none;
+  opacity: 1;
+  // opacity变为1之后立马渐出
+  animation: titleFadeout 200ms ease-in 200ms forwards;
+  @keyframes titleFadeout {
+    from{
+      opacity: 1;
+    }
+    to{
+      opacity: 0;
+    }
+  }
+}
+
+.contentText--active{
+  animation: contentShow 600ms ease-in-out 1.4s forwards;
+  @keyframes contentShow {
+    from{
+      margin-top: calc(92 / 1080 * 100vh);
+      opacity: 0;
+    }
+    to{
+      margin-top: calc(32 / 1080 * 100vh);
+      opacity: 1;
+    }
+  }
+}
+.contentText--immediateActive{
+  animation: contentImmediateShow 600ms ease-in-out forwards;
+  @keyframes contentImmediateShow {
+    from{
+      margin-top: calc(92 / 1080 * 100vh);
+      opacity: 0;
+    }
+    to{
+      margin-top: calc(32 / 1080 * 100vh);
+      opacity: 1;
+    }
+  }
+}
+.contentText--fadeout--unClicked{
+  animation: contentFadeout 600ms ease-in-out;
+  @keyframes contentFadeout {
+    from{
+      margin-top: calc(32 / 1080 * 100vh);
+      opacity: 1;
+    }
+    to{
+      margin-top: calc(92 / 1080 * 100vh);
+      opacity: 0;
+    }
+  }
+}
+.contentText--fadeout--clicked{
+  animation: contentShrink 300ms cubic-bezier(0, 0.92, 0.41, 1);
+  @keyframes contentShrink {
+    from{
+      margin-top: calc(32 / 1080 * 100vh);
+      transform-origin: center left;
+      transform: scale3d(1, 1, 1) translateX(-50%);
+    }
+    to{
+      margin-top: calc(32 / 1080 * 100vh);
+      transform-origin: center left;
+      transform: scale3d(0, 0, 0) translateX(-50%);
+    }
+  }
+}

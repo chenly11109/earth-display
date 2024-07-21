@@ -1,0 +1,49 @@
+.contentTextWireInputWrap{
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: calc(8/1080*100vh);
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: border 200ms ease-out;
+  &:hover{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  &--active{
+    border: 1px solid #fff;
+    &:hover{
+    border: 1px solid #fff;
+
+    }
+  }
+  &__textarea{
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: calc(8/1080*100vh) calc(20/1080*100vh) calc(44/1080*100vh);
+    font-weight: 300;
+    font-size: calc(24/1080*100vh);
+    line-height: calc(36/1080*100vh);
+    color: #fff;
+    outline: none;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    resize: none;
+    overflow: hidden;
+
+  }
+
+  &__prompt{
+    position: absolute;
+    right: calc(20/1080*100vh);
+    bottom: calc(12/1080*100vh);
+    font-weight: 300;
+    font-size: calc(20/1080*100vh);
+    line-height: calc(20/1080*100vh);
+    opacity: 0;
+    z-index: -1;
+    transition: all 200ms ease-out, color 100ms ease-out;
+    &--show{
+      opacity: 1;
+    }
+  }
+}

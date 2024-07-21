@@ -1,0 +1,33 @@
+
+
+
+.largeShortTextInput{
+  outline: none;
+  font-weight: 300;
+  font-size: calc(32/1080*100vh);
+  line-height: calc(32/1080*100vh);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: calc(10/1080*100vh);
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  padding: calc(8/1080*100vh) calc(16/1080*100vh);
+  transition: all 200ms;
+
+  &:hover{
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  &--active{
+    border: 2px solid #fff;
+    background: transparent;
+    &:hover{
+      background: transparent;
+    }
+  }
+
+  &--error{
+    border: 2px solid #FF7070;
+
+  }
+}

@@ -1,0 +1,72 @@
+.settingButtonWrap{
+  position: relative;
+  width: fit-content;
+  .settingButton{
+    position: relative;
+    width: calc(64 / 1080 * 100vh);
+    height: calc(48 / 1080 * 100vh);
+    background:rgba($color: #fff, $alpha: 0);
+    transition: all 200ms ease-out;
+    border-radius: 0px calc(8 / 1080 * 100vh) calc(8 / 1080 * 100vh) 0px;
+    &:hover{
+      cursor: pointer;
+      background:rgba($color: #fff, $alpha: 0.1);
+    }
+    &:active{
+      background:rgba($color: #fff, $alpha: 0.05);
+    }
+    &:active .settingButton__icon{
+      opacity: 0.5;
+    }
+    &__icon{
+      width: calc(68 / 1080 * 100vh);
+      height: calc(48 / 1080 * 100vh);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: opacity 200ms ease-out;
+    }
+  }
+  .settingButtonPrompt{
+    width: calc(94 / 1080 * 100vh);
+    height: calc(32 / 1080 * 100vh);
+    line-height: calc(32 / 1080 * 100vh);
+    font-size: calc(20/1080*100vh);
+    text-align: center;
+    background: #525252;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: calc(8/1080*100vh);
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: calc(56 / 1080 * 100vh);
+    cursor: default;
+    opacity: 0;
+    &--active{
+      z-index: 99;
+      animation: settingPromptShow 200ms ease-out 500ms forwards;
+      @keyframes settingPromptShow {
+        from{
+          opacity: 0;
+        }
+        to{
+          opacity: 1;
+        }
+      }
+    }
+    &--fadeout{
+      z-index: 99;
+      animation: promptFadeout 200ms ease-out forwards;
+      @keyframes promptFadeout {
+        from{
+          opacity: 1;
+        }
+        to{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
