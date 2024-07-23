@@ -20,7 +20,10 @@ type anchorPoints =
         id: string;
         coords: [number, number];
         timeStamp: number;
-        data: string;
+        city: string;
+        country:string;
+        projectName:string;
+        projectDesc:string;
         destinations: Array<[number, number]>
     }>
 
@@ -52,6 +55,8 @@ interface EarthModeType {
     //确保同一时间只有一个项目是selected的状态，用于disable其他的项目
     selectedId:string;
     setSelectedId:(setSelectedId:string)=>void;
+    hoveredId:string;
+    setHoveredId:(setSelectedId:string)=>void;
 
     //对应页面的三个状态，blur为全局状态，focus 为点一个项目zoom到项目的状态， detail 为页面的详情，右下角
     pageStatus: "blur" | "focus" | "detail";
@@ -78,6 +83,10 @@ export const useEarthStore = create<EarthModeType>((set) => ({
     selectedId:"",
     setSelectedId:(selectedId:string)=>set(produce((state:EarthModeType)=>{
         state.selectedId = selectedId;
+    })),
+    hoveredId:"",
+    setHoveredId:(hoveredId:string)=>set(produce((state:EarthModeType)=>{
+        state.hoveredId = hoveredId;
     })),
     pageStatus:"blur",
     changePageStatus:(status:"blur" | "focus" | "detail")=>set(produce((state:EarthModeType)=>{

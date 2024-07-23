@@ -1,0 +1,31 @@
+ /* Basic styling for the icon container */
+ .earth-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: 
+                radial-gradient(circle at 20% 20%, hsl(339, 89%, 66%), transparent 30%),
+                radial-gradient(circle at 50% 50%, #2f778d, transparent 100%),
+                black;
+                box-shadow: 3px 3px 15px 2px rgb(134, 146, 192), -2px 3px 3px 5px rgb(60, 28, 61); /* Light greenish shadow for a subtle glow */
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    opacity:1;
+}
+
+.earth-icon__status{
+    transform: rotate(180deg);
+    box-shadow: -3px -3px 15px 2px rgb(134, 146, 192), 2px -3px 3px 5px rgb(60, 28, 61); 
+}
+
+
+/* Hover state with glowing effect */
+.earth-icon:hover {
+    box-shadow: 0 0 20px 5px #b0ecfe; /* Intensified glowing shadow */
+    transform: scale(1.1) rotate(180deg); /* Scale and rotate effect */
+    opacity: 1;
+}

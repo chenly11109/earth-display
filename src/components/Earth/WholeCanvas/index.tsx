@@ -4,7 +4,7 @@ import { DirectionalLight, MathUtils } from "three";
 import {
   CameraShake,
   OrbitControls,
-  PerspectiveCamera,
+  // PerspectiveCamera,
 } from "@react-three/drei";
 import { GLOBE_RADIUS, GLOBE_SEG } from "../../../config/Earth/earthStyle";
 

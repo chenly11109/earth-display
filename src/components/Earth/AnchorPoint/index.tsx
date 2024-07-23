@@ -1,21 +1,18 @@
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
-import { MathUtils } from "three";
 import { useFrame } from "@react-three/fiber";
-import { QuadraticBezierLine } from "@react-three/drei";
+import { createPortal } from "react-dom";
 import {
   Mesh,
   DoubleSide,
   QuadraticBezierCurve3,
   Vector3,
   BufferGeometry,
-  EllipseCurve,
 } from "three";
 import { useEarthStore } from "../../../state/earthMode";
 import {
   convertLatLngToSphereCoords,
   getControlPoint,
 } from "../../../utils/earthPoints";
-import { useNavigate } from "react-router-dom";
 
 //光轨两端曲线会被球体挡住，可以考虑用CubicCurve,用lerp取得两个控制点，曲线会好看一些，但有可能对性能上有更高要求
 function LightRail({
@@ -64,9 +61,9 @@ function AnchorPoint({
   id: string;
 }) {
   const [hovered, setHovered] = useState(false);
-  
+
   //这边牵扯到地球的一些空置状态，基本的想法是pageStatu对应一个zoomStatus,selectedId 对应选择的项目
-  const { pageStatus, changePageStatus, zoomStatus, selectedId, setSelectedId} =
+  const { pageStatus, changePageStatus, zoomStatus, selectedId, setSelectedId,  setHoveredId} =
     useEarthStore((state) => state);
 
   const selectNow = selectedId === id;
@@ -107,8 +104,10 @@ function AnchorPoint({
           if (!(pageStatus === "detail")) {
             setHovered(true);
           }
+          setHoveredId(id)
         }}
         onPointerOut={() => {
+          setHoveredId('')
           if (!(pageStatus === "detail")) {setHovered(false);}
         }}
         onClick={() => {
@@ -134,8 +133,7 @@ function AnchorPoints() {
   useEffect(() => {
     groupRef.current.visible = !status;
   }, [status]);
-  return (
-    <group ref={groupRef}>
+  return (<group ref={groupRef}>
       {(zoomStatus ? anchorPointsZoom : anchorPoints).map((point) => (
         <group key={point.id}>
           <LightRail
