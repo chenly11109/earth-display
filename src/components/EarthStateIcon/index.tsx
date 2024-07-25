@@ -3,7 +3,7 @@ import "./index.css"
 import cn from 'classnames'
 
 
-export default function(){
+export default function EarthIcon(){
     const {changeStatus, status} = useEarthStore(state=>state);
 
     return <div

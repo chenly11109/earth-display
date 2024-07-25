@@ -73,9 +73,17 @@ export default function WholeCanvas() {
   });
 
   const [hovered, setHovered] = useState(false);
-  const pageStatus = useEarthStore((state) => state.pageStatus);
+  const {hoveredId,pageStatus,selectedId} = useEarthStore((state) => state);
   const controlStatus = pageStatus === "blur";
 
+
+  useEffect(()=>{
+    if(!selectedId){
+      setCameraPosition([
+       0,0,8
+      ]);
+    }
+  },[!!selectedId])
   return (
     <>
       {/* 镜头 */}
@@ -126,7 +134,7 @@ export default function WholeCanvas() {
         }}
         visible={false}
         onClick={(e) => {
-          if (e.delta < 10 && pageStatus !== "detail") {
+          if (e.delta < 10 && hoveredId) {
             setCameraPosition([
               e.intersections[0].point.x,
               e.intersections[0].point.y,
@@ -146,7 +154,7 @@ export default function WholeCanvas() {
 
       <ambientLight args={["#040410", 2]} />
 
-      {/* <spotLight position={[0, -7, 0]} args={["#63C5DA", 1, 100]} /> */}
+      <spotLight position={[0, -7, 0]} args={["#63C5DA", 1, 100]} />
     </>
   );
 }

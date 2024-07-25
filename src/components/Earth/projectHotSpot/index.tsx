@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import * as THREE from "three";
-import glowTexture from "./glow.png";
+// import * as THREE from "three";
+// import glowTexture from "./glow.png";
 import { GLOBE_RADIUS, GLOBE_SEG } from "../../../config/Earth/earthStyle";
 
 import { useEarthStore } from "../../../state/earthMode";
@@ -16,16 +16,12 @@ export default function ProjectHotSpot() {
   const materialRef = useRef<any>();
 
    //地球表面外发光效果的材质
-   const spriteMaterials = new THREE.SpriteMaterial( 
-    { 
-      map: new THREE.TextureLoader().load(glowTexture ), 
-      color: "#253DAE", transparent: true, blending: THREE.AdditiveBlending,opacity:1
-    });
+  //  const spriteMaterials = new THREE.SpriteMaterial( 
+  //   { 
+  //     map: new THREE.TextureLoader().load(glowTexture ), 
+  //     color: "#253DAE", transparent: true, blending: THREE.AdditiveBlending,opacity:1
+  //   });
 
-//一打开页面时隐藏地球
-  useEffect(()=>{
-    projectRef.current.visible = false;
-  },[])
 //页面切换时的动画效果
 let opacity = 0;
   useEffect(() => {
@@ -68,7 +64,7 @@ let opacity = 0;
     <group ref={projectRef}>
       
        {/*外发光效果*/}
-      <sprite material={spriteMaterials} scale={[7,7,0]} ref={spriteRef}/>
+      {/* <sprite material={spriteMaterials} scale={[7,7,0]} ref={spriteRef}/> */}
       {/*光柱，那些长长短短变化的圆柱体，重点项目和非重点项目*/}
       <Streamers />
       {/*地球上闪烁的点+点到点之间的连线*/}

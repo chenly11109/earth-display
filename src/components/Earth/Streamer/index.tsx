@@ -49,7 +49,7 @@ function StreamerSignature({
 }) {
   const meshRef = useRef<Mesh>(null!);
   const boxRef = useRef<Mesh>(null!);
-  const {zoomStatus,status} = useEarthStore((state) => state);
+  const {zoomStatus} = useEarthStore((state) => state);
 
   useFrame(({ clock }) => {
     const x = 2 * clock.getElapsedTime() + pos.x;

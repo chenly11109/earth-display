@@ -28,7 +28,6 @@ export default function TitleNameInput({
 }) {
 
   const [isClicked, setClicked] = useState(false)
-console.log(size==='large')
   const focusTransitions = useTransition(isClicked, {
     from: { opacity: 0.5, width: `calc(${width + 20} / 1080 * 100vh)`, height: `calc(${size==='large' ? 60 : 56} / 1080 * 100vh)` },
     enter: { opacity: 1, width: `calc(${width} / 1080 * 100vh)`, height: `calc(${size==='large' ? 40 : 36} / 1080 * 100vh)` },
